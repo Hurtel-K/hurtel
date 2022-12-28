@@ -79,4 +79,19 @@ Exemple :SELCT COUNT(id),duration FROM recipes GROUP BY duration
  de ne pa dupliquer les differentes valeurs identique lors de l'afficharge 
 
 
+
+                                      * Order,limite,max et min
+
+-SELECT* FROM nom de la table ORDER BY nom du champ : cette requett nous permetra de d'afficher les valeur des champ selon
+un odre precis. elle a deux attribu DESC qui affichera dans l'ordre decroissant et ASC dans l'odre croissant 
+ 
+-SELECTSELECT* FROM nom de la atable LIMIT nombre limite: cette requette nous permetra de le limter le nombre de valeur
+d'un champ que l'on voudras afficher du haut vers le bas elle peut avoir comme attribue OFFSET 'numero de la ligne' qui 
+permetra d'indiquer a partir de quelle ligne la commande LIMIT s'executera
+
+-SELECT MAX(nom de la colonne) FROM nom de la table;:cette requetteest utilise pour retourner la valeur maximum de la colonne 
+ qui ne s'applique que a des valeur numerique ou alphanumerique
+ 
+--SELECT MIN(nom de la colonne) FROM nom de la table;:cette requetteest utilise pour retourner la valeur minimale de la colonne 
+ qui ne s'applique que a des valeurs numerique ou alphanumerique
                       
