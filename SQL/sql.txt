@@ -1,0 +1,82 @@
+                      *Creation d'une table dans une base de donne
+
+pour creer la table dans la base de donne, on a utilise la syntaxe suivante
+create 'nom de la table'(champ1 'type',champ2'type'.....);
+
+                     *Insertion des champ et leur valeur dans une base de donne
+CREATE TABLE recipes
+(
+title varchar(50),
+slug varchar (50),
+content TEXT,
+duration SMALLINT,
+online BOOLEAN,
+created_at DATETIME
+);
+INSERT INTO recipes(
+title,
+slug,
+content,
+duration,
+online,
+created_at
+)
+VALUES(
+'salade de fruit',
+'salade_de_fruit',
+'contenue_de_text',
+30,
+true,
+1671801925
+);
+                           *Notion d'id de cles primaire,etrangere et jointure
+
+Pour pouvoir creer des table avec des id et et les donnes la valeur de cles primaire et cles etrangere  et inserer des information dans les differents on n'a utiliser la syntaxe suivante:
+PRAGMA foreign_keys = ON;
+CREATE TABLE IF NOT EXISTS categorie(
+id integer PRIMARY KEY AUTOINCREMENT,
+title varchar(50) NOT NULL,
+description text
+);
+INSERT INTO categorie(title)
+VALUES
+('plat'),('dessert');
+CREATE TABLE recipes(
+id integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+title varchar(50)NOT NULL,
+slug varchar(50)NOT NULL,
+content text,
+categorie_id integer,
+duration smallint
+FOREIGN KEY(categorie_id)REFERENCES categorie (id)
+);
+INSERT INTO recipes(title,slug,categorie_id)
+VALUES
+('creme anglise','creme-anglaise',2,10),
+('soupe','soupe',1,20),
+('salade de fruit','salade-de-fruit',2,30);
+                      
+ Pour pouvoir afficher le resultat on a du faire une jointure deux deux table en utilisant la syntaxe suivante:
+
+-SELECT * FROM recipes  JOIN categorie  ON recipes.categorie_id= categorie.id; 
+ce qui nous a donne le resultat visible dans notre dossier sql de notre depot
+
+                             *Fonction d'agregation
+
+-SELECT COUNT(nom du champ)FROM nom de la table; :cette requette nous permet de  compter le nombre de valeurs que comporte 
+un champ     Exemple: SELECT COUNT(id)FROM recipes qui nous donnera 3
+
+-SELECT GROUP CONTACT(nom du champ)FROM nom de la table; : cette requette nous permet de faire la concatenation des different
+valeur d'une table  Exemple: SELECT GROUP CONTACT(title)FROM recipes  qui nous donnera la liste de tout les titre de la table 
+ 
+-SELECT sum(nom du champ)FROM nom de la table : cette requette nous permet de faire pour un champ la somme valeur numerique 
+ 
+-SELECT COUNT(champ1),champ2 FROM nom de la table GROUP BY champ2; :cette requette nous permetra
+ de compter le nombre de 'champ1' et les separer par 'champ2' correspondant au 'champ1' 
+Exemple :SELCT COUNT(id),duration FROM recipes GROUP BY duration
+ 
+-SElECT DISTINCT (nom de champ)FROM nom de la table; : pour une champ contenant plusieur meme valeurs cette requette permet
+ de ne pa dupliquer les differentes valeurs identique lors de l'afficharge 
+
+
+                      
