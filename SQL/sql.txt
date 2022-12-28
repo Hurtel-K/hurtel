@@ -95,3 +95,19 @@ permetra d'indiquer a partir de quelle ligne la commande LIMIT s'executera
 --SELECT MIN(nom de la colonne) FROM nom de la table;:cette requetteest utilise pour retourner la valeur minimale de la colonne 
  qui ne s'applique que a des valeurs numerique ou alphanumerique
                       
+                                 *Notion de transaction et sous requettes 
+
+-BEGING TRANSACTION : cette requette permet de prevoir a l'avance une eventuelle erreur que l'on pourai connaitre dans l'e-
+xecution de nos requettes Exemple: L'on execute d'abord la requette BEGING TRANSACTION  l'on peut supprimer un  champ avec
+ la requette suivante DELETE FROM nom de la table
+WHERE id=1; apres l'avoir suprimmer l'on se rend compte que c'est pas vraiment l'action que l'on voulais effectuer l'on peut
+ utiliser la conmmande ROLLBACK TRANSACTION; elle nous restitura nos  valeur que l'on viens de supprimer. ce pendant si 
+apres avoir execute nos requettes et que l'on est satisfait du resultat l'on pourra enregistre cela dans la base de donne
+avec la commande COMMIT TRANSACTION;
+
+
+-les sous rerquette permettent d'effectuer une requette et de recuperer le resultat pour l'effetuer dans une autre requette
+ 
+Exemple: SELECT*,(SELECT COUNT(*) FROM table1) FROM table2;
+cette requette va afficher tout les element de la table2 avec une colonne suplementaire qui me donnera le nombre d'id de la
+table1 
