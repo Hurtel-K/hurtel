@@ -111,3 +111,22 @@ avec la commande COMMIT TRANSACTION;
 Exemple: SELECT*,(SELECT COUNT(*) FROM table1) FROM table2;
 cette requette va afficher tout les element de la table2 avec une colonne suplementaire qui me donnera le nombre d'id de la
 table1 
+
+                                                 
+                                                *Notion de view et triggers
+
+
+-CREATE VIEW permet de creer une table virtuelle qui vas etre le resultat une requette particiliere. c'est a dire que lors
+de notre gestion de donné, nous pourrons etre appelé a saisir une requette complex pour afficher un resultat;nous pourons 
+donc resumer cette requette en utilisant un CRAETE VIEW (non de la vue)AS (requette )
+Exemple: CREATE VIEW hurtel AS SELECT * FROM recipes  JOIN categorie  ON recipes.categorie_id= categorie.id;
+
+
+-CREATE TRIGGERS encore appelé declancheur permet d'executer un ensemble d'instruction juste apres un evenement.ce qui 
+permet d'automatiser les action au sein d'un systeme de gestion de base de donne. 
+Exemple:
+CREATE TRIGGER  nom trigger 
+{BEFORE | AFTER} {INSERT | UPDATE| DELETE }
+ON  nom de la table FOR EACH ROW
+ corp du trigger; 
+
