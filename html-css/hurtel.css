@@ -19,6 +19,7 @@ display: flex;
     height: 60px;
     width: 850px;
     
+    
 }
 .p
 {
@@ -29,6 +30,7 @@ display: flex;
     font-size: 45px;
     text-align: center;
     margin-bottom: 3PX;
+    
     
 }
 li
@@ -47,14 +49,19 @@ a
 }
 body
 {
-    background-image: url("hu2.PNG");
+    background-image: url("image/hu2.PNG");
     margin: 0;
     padding: 0;
     background-attachment: fixed;
 }
-.image
+.text
 {
-
+height: 400px;
+border: 10px white ridge;
+border-radius: 30px;
+color: white;
+font-family: Arial ;
+box-shadow: 10px 10px 10px 10px white inset ;
 
 }
 
