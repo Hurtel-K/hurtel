@@ -58,6 +58,7 @@ body
 {
     display: flex;
     height: 400px;
+    margin-bottom: 40px;
     
 
 }
@@ -79,6 +80,7 @@ height: 400px;
 width: 700px;
 border-bottom: 10px white double;
 margin-left: 20px;
+
 
 
 }
@@ -110,7 +112,69 @@ margin-left: 20px;
 text-align: justify;
 
 }
-
-
-
+.bouton
+{
+    background-color:rgb(44, 14, 2); 
+    height: 70px;
+    padding-top: 20px;
     
+
+}
+.butt
+{
+font-family: wide latin;
+font-size: 20px;
+height: 50px;
+background-color:white;
+color: rgb(44, 14, 2);
+box-shadow: 10px 10px 10px white;
+border-radius: 10px;
+margin-right: 100px ;
+}
+.but
+{
+font-family: wide latin;
+font-size: 20px;
+height: 50px;
+background-color:white;
+color: rgb(44, 14, 2);
+box-shadow: 10px 10px 10px white;
+border-radius: 10px;
+margin-left: 20px;
+margin-right: 20px;
+}
+select
+{
+
+    font-family: wide latin;
+    font-size: 20px;
+    height: 50px;
+    background-color:white;
+    color: rgb(44, 14, 2);
+    box-shadow: 10px 10px 10px white;
+    border-radius: 10px;
+
+}
+input
+{
+
+    font-family: wide latin;
+    font-size: 20px;
+    height: 50px;
+    background-color:white;
+    color: rgb(44, 14, 2);
+    box-shadow: 10px 10px 10px white;
+    border-radius: 10px;
+    margin-right: 40px;
+
+}
+label
+{
+
+    font-family: wide latin;
+    font-size: 30px;
+    height: 50px;
+    color: white
+
+
+}
