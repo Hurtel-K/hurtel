@@ -1,3 +1,16 @@
+.redressed{
+    font-family:'redressed';
+
+
+}
+.merriweather{
+
+    font-family: 'merriweather-black ';
+}
+
+
+
+
 .container-fluid
 {
     font-family:
@@ -26,6 +39,9 @@ transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
     color: green;
     border-color:green ;
     transition: 0.5s;
+    font-family: merriweather;
+    
+    
 }
 .btn-order:hover,
 .btn-order:active
