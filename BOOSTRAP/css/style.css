@@ -20,6 +20,7 @@
     background-color: rgb(0, 0,0, 0.55);
     font-family: Merriweather-black;
     box-shadow: 1px 1px 3px rgb(255,255,255,0.54);
+    position:fixed;
 }
 .cc-navbar .nav-link
 {
@@ -52,4 +53,20 @@ background-color: green;
 }
 a{
     margin-left: 50px;
+}
+.banner
+{
+background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/font2.PNG") fixed ;
+background-size: cover;
+height: 800px;
+padding-tpx;
+
+}
+.banner .banner-desc{
+font-size: 48px;
+font-weight: 400;
+color: white;
+}
+.text-uppercase{
+    font-weight: 400;
 }
