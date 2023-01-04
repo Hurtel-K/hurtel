@@ -21,6 +21,7 @@
     font-family: Merriweather-black;
     box-shadow: 1px 1px 3px rgb(255,255,255,0.54);
     position:fixed;
+    z-index: 99;
 }
 .cc-navbar .nav-link
 {
@@ -66,7 +67,4 @@ padding-tpx;
 font-size: 48px;
 font-weight: 400;
 color: white;
-}
-.text-uppercase{
-    font-weight: 400;
 }
