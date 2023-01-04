@@ -23,6 +23,11 @@
     position:fixed;
     z-index: 99;
 }
+.navbar-brand
+{
+    font-size: 30px;
+    font-family:wide latin;
+}
 .cc-navbar .nav-link
 {
 border-bottom: 1px  solid transparent;
@@ -33,7 +38,21 @@ transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
     padding-bottom: 20px;
     border-bottom-color:green ;
 }
+.cc-menu{
+    background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/menu2.jpg") fixed ;
+    background-size: cover;
+    height: 1200px;
+}
+.card-header{
+    font-size:20px;
 
+}
+.hurtel{
+    width: 1200px;
+    height: 200px;
+    background-color: transparent;
+    ;
+}
 
 .btn-order
 {
@@ -67,4 +86,9 @@ padding-tpx;
 font-size: 48px;
 font-weight: 400;
 color: white;
+}
+.card-img-top
+{
+
+height:200px ;
 }
