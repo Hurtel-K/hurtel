@@ -81,12 +81,16 @@ background-color:var(--bs-teal);
 a{
     margin-left: 50px;
 }
-.banner
+.banner,
+.order-form
 {
 background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/font2.PNG") fixed ;
 background-size: cover;
 height: 800px;
 
+}
+.order-form{
+    height: 500px;
 }
 .banner .banner-desc{
 font-size: 48px;
@@ -97,4 +101,8 @@ color: white;
 {
 
 height:200px ;
+}
+
+.row3{
+    margin-right: 50px;
 }
