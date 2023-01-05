@@ -11,10 +11,7 @@
 
 
 
-.container-fluid
-{
-    font-family:
-}
+
 .cc-navbar
 {
     background-color: rgb(0, 0,0, 0.55);
@@ -47,6 +44,16 @@ transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
     font-size:20px;
 
 }
+.carousel-inner {
+    height: 750px;
+}
+.d-block{
+height: 700px; 
+width: 1000px;
+}
+.carousel-inner{
+    margin-left: 60px;
+}
 .hurtel{
     width: 1200px;
     height: 200px;
@@ -57,8 +64,8 @@ transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
 .btn-order
 {
 
-    color: green;
-    border-color:green ;
+    color: var(--bs-teal);
+    border-color:var(--bs-teal);
     transition: 0.5s;
     font-family: merriweather;
     
@@ -68,7 +75,7 @@ transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
 .btn-order:active
 {
 color: white;
-background-color: green;
+background-color:var(--bs-teal);
 
 }
 a{
@@ -79,7 +86,6 @@ a{
 background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/font2.PNG") fixed ;
 background-size: cover;
 height: 800px;
-padding-tpx;
 
 }
 .banner .banner-desc{
