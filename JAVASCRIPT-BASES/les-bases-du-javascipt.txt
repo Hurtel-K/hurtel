@@ -64,6 +64,33 @@ console.log(hurtel (18,'fr'))
 
 cette fonction permettra de verifier nos conditions et afficher "true" et "false" si les conditions son vrai et fause  
 
+
+                                
+                                          *les classes
+
+
+les classes sont des syntaxes permetant d'atribuer des prototipes a des objets  dans le but d'avoir des types posonalisés
+ en javascrip l'on utilisera la fontion constructor poure la mise en place de notre classe 
+Exemple de creation d'une classe.
+
+class student{
+        ecole='jule ferry'
+     constructor (prenom,nom){
+        this.prenom=prenom
+        this.nom=nom
+    
+     }
+    }
+
+     const john = new student( 'john','Doe')
+     const jean = new student( 'jean','Doe')
+     console.log(john,jean)
+
+}
+cette classe permet de creer une variable et s'attribuer des objets comme des eleves avec leur nom et prenom    
+
+
+
  
 
  
