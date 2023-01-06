@@ -1,0 +1,47 @@
+                                            * les variable
+
+
+ elle ce declare de plusieur façons a travers la syntaxe suivante var ,let,et const 'nom de la variable' = valeur 
+ Exemple:
+var a = "hurtel";
+conts b = 20 ;
+var c = true;
+var notes= [12,13,15,] pour les tableaux
+une varriable peut avoir plusieur type :entier,undefined,boolean,null
+
+                               
+                                     * les conditions
+
+
+ - const age = 20;
+if(age>18){ console.log( " majeur")} elle nous permetra d'afficher majeur si l'age est supperieur a 18
+ on notes les differents signe de comparaison:
+<,>,<=,>=,===,==
+
+- const age =19
+ -const pays ='fr'
+  
+ if ((pays==='fr' && age>=18)|| (pays=== usa && age >=16)){( console.log('vous aves le droit de conduire'))}
+else {(" vous n'avez pas le droit de conduire")}
+  
+cette condition permet de verifier si l'une des conditions est vrai et affiche 'vous avez le droit de conduire'
+si elle est fause elle affichera " vous n'avez pas le droit de conduire"
+
+une autre maniere d'ecrire une condition
+
+switch(pays){
+casa'fr':
+console.log("je suis en france")
+break
+case'usa':
+console.log("je suis aux usa")
+break
+default :
+('je ne suis dans aucun pays')
+break 
+}
+
+
+
+
+
