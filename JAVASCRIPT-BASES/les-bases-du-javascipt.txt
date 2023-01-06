@@ -87,15 +87,40 @@ class student{
      console.log(john,jean)
 
 }
-cette classe permet de creer une variable et s'attribuer des objets comme des eleves avec leur nom et prenom    
+cette classe permet de creer une variable et s'attribuer des objets comme des eleves avec leur nom et prenom 
 
 
 
- 
-
- 
+                                                  *les fonction usuelles
 
 
+ -la methode 'cat' elle permet de recuperer un index positif ou negatif et donner la valeur  crrespondante a cet index
 
+-la methode 'concat' permet de concatener les tableaux pour pourvoir les fusionner
+
+-la methode 'fill' permet de remplire un tableau avec des valeurs precises
+
+-la methode 'filter' permet de filtrer des nombre precis dans un tableau selon une condition precise
+
+-la methode 'find' permet de recuperer la premiere valeur le la methode 'filter'
+
+-la methode 'findindex' permet de nous renvoyer l'index de la methode'find'
+
+-La méthode 'forEach' exécute une fois une fonction fournie pour chaque élément d'un tableau.
+
+-La méthode 'from' permet de creer un tableau qui prend en compte deux parametres
+
+-La méthode 'include verifier si un champ existe dans un tableau en renvoyant la valeur true or false'
+
+-La méthode 'join' permet de joindre les elements d'un taleau avec ou pas un carractere de lieson
+
+-La méthode 'map' crée un Nouveau tableau rempli avec les résultats de l’appel d’une fonction fournie sur 
+chaque élément du tableau appelant. 
+
+-La méthode 'push' ajoute un ou plusieurs éléments à la fin de et renvoie la nouvelle longueur du tableau.
+
+-la methode 'reduce' premet de faire une sorte de somme des valeurs valeur d'un tableau
+
+-la methode 'reverse'qui permet d'inverser les element d'un tableau
 
 
