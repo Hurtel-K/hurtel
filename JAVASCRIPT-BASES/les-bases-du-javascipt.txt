@@ -40,6 +40,33 @@ default :
 ('je ne suis dans aucun pays')
 break 
 }
+ 
+                                      *fonctions
+
+
+ les fontions des ensembles d'operation qui retournes des resultats elles peuvent prendre en parrametre des argument qui 
+peuvent etres des varriables  et doit etres appélé pour s'executer.syntaxe d'une fonction:
+
+FUNCTION nom de la fontion (argument1,argument2.....)
+
+{corp de la fonction      {RETURN argument a retourner}  } appel de la fonction avec des parametre d'appel
+
+Exemple:
+ 
+function hurtel(age,pays)
+{
+if((pays==='fr' && age>=18)|| (pays=== usa && age >=16))
+
+{return true}
+{retunr false}    }
+
+console.log(hurtel (18,'fr')) 
+
+cette fonction permettra de verifier nos conditions et afficher "true" et "false" si les conditions son vrai et fause  
+
+ 
+
+ 
 
 
 
