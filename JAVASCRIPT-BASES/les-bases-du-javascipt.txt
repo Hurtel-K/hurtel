@@ -124,3 +124,49 @@ chaque élément du tableau appelant.
 -la methode 'reverse'qui permet d'inverser les element d'un tableau
 
 
+
+                                            *les timerssultat
+
+
+les timers sont des methodes permetant d'avoir le controle sur le temp ou et interval de temp d'execution des resultats
+nous avons les methodes SET TIMEOUT ET SET INTERVALE
+EXEMPLE:
+
+
+console.log('bonjour')
+    setTimeout(()=>{
+        console.log('les gens')
+    },1000)
+
+Cette methode permet d'afficher BONJOUR et apres une seconde ecoulé elle affichera LES GENS
+
+
+console.log('bonjour')
+    setTintervale(()=>{
+        console.log('les gens')
+    },1000)
+
+Cette methode permet d'afficher BONJOUR et apres une seconde ecoulé elle affichera LES GENS
+en le repetant a chaque seconde qui s'ecoule
+
+                                            *promise
+
+les promise sont des fonction qui permetent de representer le coté asynchrones pour faciliter le travail.elle prend
+en parametre deux fonction: RESOLVE lorque la promesse ete resolue et REJECT lorque la promesse n'a pa ete resolue
+
+Exemple:
+
+const p=new Promise((resolve, reject) => {
+    resolve(4)
+    console.log(p)
+
+})
+p.then((n)=> {
+    console.log('NOMBRE', n)
+})
+.catch((e)=> {
+    console.log('echec',e)
+})
+
+cette promesse affichera 'nombre 4' si l'on prend en parametre la methode resolve 'echec 4' si on prend en parametre
+la methode reject
