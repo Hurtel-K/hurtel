@@ -125,7 +125,7 @@ chaque élément du tableau appelant.
 
 
 
-                                            *les timerssultat
+                                            *les timers
 
 
 les timers sont des methodes permetant d'avoir le controle sur le temp ou et interval de temp d'execution des resultats
@@ -170,3 +170,46 @@ p.then((n)=> {
 
 cette promesse affichera 'nombre 4' si l'on prend en parametre la methode resolve 'echec 4' si on prend en parametre
 la methode reject
+
+
+                                            
+                                                      *Appel http
+
+
+
+
+
+
+
+                                                      *les modules
+
+
+les modules permetent de sauvegarder nos differents script dans un fichier externe qui par la suite pourra etres 
+importer pour l'utiliser dans notre code 
+  procedure:
+
+-crer un fichier .js
+
+-A l'interieur de ce fichier saisir nos differents fonction ou procedure en leurs donant un nom et en ajoutant la
+objet export devant chaque objet que l'on souhaiterais exporter et les sauvegarder
+
+-En suite lorsque l'on voudra faire appel a ces derniers ,il faudra se placer dans notre zone de code de  notre editeur
+de texte
+
+-Puis ajouter un type module a notre balise ouvrante script <script type='module'>
+
+-En suite saisir IMPROT {"nom de objet sauvegarder"} FROM ' chemin d'acces du fichier de sauvegarde'
+
+-en suite l'on peut utiliser notre objet
+ 
+il est a noter que  l'on veut importer un meme objet plusieur fois pour different usage dans ce cas il seras question pour
+nous de le renomer a chaque import pour eviter de creer un conflis 
+-pour cela on uliseras la syntaxe :
+
+ IMPROT {"nom de objet sauvegardeé" AS"nouveau nom de l'objet sauvegardé "} FROM ' chemin d'acces du fichier de sauvegarde'
+  
+si l'on veut tout impoter les objets de notre fichier on utilisera la syntaxe:
+
+ IMPROT * FROM ' chemin d'acces du fichier de sauvegarde'
+
+
