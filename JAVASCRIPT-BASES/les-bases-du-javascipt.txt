@@ -213,3 +213,56 @@ si l'on veut tout impoter les objets de notre fichier on utilisera la syntaxe:
  IMPROT * FROM ' chemin d'acces du fichier de sauvegarde'
 
 
+
+
+                                                  *l'objet date
+
+ le java scrip ne possede que un seul objet date pour representer les dates elle peut ce definir a traver le timestamp qui 
+represente en ml seconde le temp ecoulé depuis la nuit du 1janvier1970 
+Quelque syntaxe de creation des dates
+ 
+-new date() qui nous donne l'heur exacte a laquelle on est
+ 
+-new date(2022,0,1)
+
+si l'on veut savoir le decalage que l'on a avec le temp universelle on prendra notre date d'aujoud'hui a laquelle on
+associera ume methode:
+
+-new date (2023,0.9).getTimzoneoffset()
+ 
+si l'on veut savoir la date du jour present la on auras la syntaxe:
+
+-new date ().toLocaleDateString()
+
+si l'on veut avoir la dete  et le temp du moment present :
+
+new date ().toLocaleString()
+
+si l'on veut avoir que le temp:
+
+new date ().toLocaleTimeString()
+
+
+                                                *commentaire
+
+
+en java scrip les commentaires sont capitals ell permet la comprehenssion du code en cas de oubli d'une fonctionalité
+
+-// "texte de  commentaire" elle permet d'ecrire un commentaire sur une ligne
+
+-/* text de commantaire */  elle permet de faire un commantaie sur plusieur ligne ou de delimiter un commantaire
+
+les commantairea peuvent aussi nous aider a defininir a l'avance a quoi renvoie une var un objet que l'on souhaite
+utiliser ce qui nous permettra de pas entrer une valeur erroné dans un syntaxe
+
+-/* titre du commantaire
+  *
+  *@param{ number}age
+  *@param{string}pays code sexe sur deux carractaire
+  *@return{}
+
+de cette façon lors de l'execution de ma fonction l'ajout d'une valeur inaproprié se verra 
+
+ 
+
+
