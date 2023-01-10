@@ -1,0 +1,29 @@
+                                       * Manipulation du Dom
+
+il sera question pour nous de parcourir les fonctionalités qui nous seront utile en fesant un listing de fonction
+
+-querySelector elle permet de nous renvoyer un element de notre code html grace a son id sur lequel on pourra effectuer
+plusieur tratitement
+
+-querySelectorAll elle permet de nous renvoyer plusieur element de notre code html 
+
+-.innerHTML nous permet de voir le corp d'un element Exp: div.innerHTML 
+
+-nom de la balise.setAttribute('ancien attribu','nouvel attribu') permet de modifier un attribu d'une balise 
+
+-.nom de la balise.remoteAttribute ('nom de l'attribu')permet de suprimer l'attribu
+
+- style permet d'appliquer directement du style un element a travers le javascrip Exp: li.style.color=''blue
+
+- console.log (getComputerStyle(nom de la balise).nom du style) nous permet de voir le style qui a ete attribuer a un element
+
+-cont new 'nom de l'element'=createElement('nom de lelement') nous permet de creer un nouveau element
+
+-ducument .querySelector('nom d'un element').append(new'nom de element crée') permet d'ajouter un element cree a un 
+element existant 'prepend' pour le mettre au debut et append pour le mettre ala fin
+
+-'balise1'.insertAdjacentElement('nom de la position','balise2')cette requette nous permet inserer la balise2 a une
+position precise par rapport a la balise1 elle prend en parametre les positions 'afterbegin','beforebegin','afterEnd','beforeEnd'
+
+-'nom de l'element'.REMOVE() permet de supprimer un element dans dans le DOM
+  
