@@ -48,6 +48,22 @@ selecteur suivant un ordre d'ecriture
         })
 cette syntaxe permet d'eviter les erreur de chargement de notre code Jquery cest a dire lorque l'on auras notre page web le
 code jquery chargera  simultanement avec notre page web 
+
+                                 
+
+                                     *Gestion des evenements:introduction
+ 
+un evenement correspon a un moment precis ou une action se produit. l'action peut venir de l'utilisateur comme faire un click
+ou du navigateur comme le chargement d'une page.par la nous verrons donc la notion de gestionnaire d'evenement composé de deux
+chose: le nom de l'evenement a gerer et d'une fonction a executer lors du declanchement de l'evenement
+
+ 
+-
+    $('p').click(function(){
+    $(this).hide()
+            })
+ cette syntaxe permet d'effectuer un evenement click sur un parragraphe et de pouvoir et pourvoir cacher cette 
+evenement lorsque le click est effectuer
  
 
   
