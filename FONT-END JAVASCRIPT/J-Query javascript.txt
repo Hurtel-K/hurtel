@@ -66,4 +66,69 @@ chose: le nom de l'evenement a gerer et d'une fonction a executer lors du declan
 evenement lorsque le click est effectuer
  
 
+                                     *Evenement lies a la souris
+
+-  $('p1').dblclick(function(){
+    $(this).hide()
+            })
+cette syntaxe permet d'effectuer un double click sur notre premier parragraphe et de pouvoir  cacher cette 
+evenement lorsque le double click est effectue
+
+- $('.p3').hide()
+
+            $('.p2').mouseenter(function(){
+            $('.p3').show()
+            })
+
+            $('.p2').mouseleave(function(){
+            $('.p3').hide()
+            })
+
+cette syntaxe permet  de cacher le paragraph3 dans un premier temp, de le faire apparaitre lorsque l'on survole le paragraphe2 et en fin de 
+le cacher a nouveau lorsque l'on retir le pointeur du paragraphe2
+
+- $('.p3').hide()
+
+     $('.p2').hover(
+                       function(){ $('.p3').show()},
+                       function(){ $('.p3').haide()}
+                      
+         )
+cette fonction fais la meme chose que la precedent en utilisant une autre methode
+      
+        
+-            $('.p5').hide()
+
+            $('.p4').mousedown(function(){
+            $('.p5').show()
+            })
+
+            $('.p4').mouseup(function(){
+            $('.p5').hide()
+            })
+
+cette syntaxe permet  de cacher le paragraph5 dans un premier temp, de le faire apparaitre lorsque l'on effectu un clic enfoncé sur le 
+paragraphe4 et en fin de le cacher a nouveau lorsque l'on relache le click du paragraphe4
   
+                                     
+                                   *les evenemet lies au clavier
+
+   <label for="prenom"> Entrer votre prenom</label>
+    <input type="text" id="prenom" name="prenom">
+
+
+    $('#prenom').keydown(function(){
+
+        $(this).css('background-color','#69c')
+         })
+
+    $ ('#prenom').keyup(function(){ 
+        $(this).css('background-color','#c72')
+
+    })  
+
+cette fonction permet a ce que lorsque on enter une touche dans le input de notre page en pressant sur cette tochel la couleur du label 
+devien blue et lorsque on la relache la couleur deviens orange 
+
+
+
