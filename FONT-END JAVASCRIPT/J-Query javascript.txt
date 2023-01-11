@@ -131,4 +131,67 @@ cette fonction permet a ce que lorsque on enter une touche dans le input de notr
 devien blue et lorsque on la relache la couleur deviens orange 
 
 
+                            *les evenements lies au formulaire
 
+
+  $('#prenom').focus(function(){
+
+        $(this).css('background-color','#69c')
+         })
+
+
+cette evenement permet de maintenir le fond du label en bleu lors de l'entré d'un champ 
+
+ <fieldset id="fld">
+    <label for="prenom"> Entrer votre prenom</label>
+    <input type="text" id="prenom" name="prenom">
+
+    <label for="nom"> Entrer votre nom</label>
+    <input type="text" id="prenom" name="nom">
+    </fieldset>
+
+    $('#fld').focusin(function(){
+
+        $(this).css('background-color','yellow')
+         })
+
+    $('#fld').focusout(function(){
+
+        $(this).css('background-color','purple')
+        })    
+    
+cette syntaxe permet a ce que l'exterieur du label devien jaune cest a dire la fieldset lorsque l'on click en interieu et la fieldset devient
+violette lorsque l'on click a l'exterieur du label
+
+ -
+   <select id="liste">
+
+    <option value="c1" selected='selected'> hurtel </option>
+    
+    <option value="c2"> kemayou</option>
+</select>
+
+   $('#liste').change(function(){
+
+alert('nouvelle option selectionée')
+
+            
+
+         }) 
+
+cette syntaxe permet de m'afficher 'nouvelle option selectionée' lorque je change d'option  
+
+-
+   
+    <form id="formulaire">
+    <input type="submit" value="Envoyer">
+    </form>
+  
+  $('#formulaire').submit(function(){
+
+              alert('Formulaire envoyé')
+
+            
+})
+
+ cette syntaxe permet  envoyer un formulaire et d'afficher une boite de dialogue pour confirmer l'envoi de ce  formulaire
