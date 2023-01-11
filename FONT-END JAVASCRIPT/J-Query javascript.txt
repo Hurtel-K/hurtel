@@ -26,4 +26,28 @@ element existant 'prepend' pour le mettre au debut et append pour le mettre ala 
 position precise par rapport a la balise1 elle prend en parametre les positions 'afterbegin','beforebegin','afterEnd','beforeEnd'
 
 -'nom de l'element'.REMOVE() permet de supprimer un element dans dans le DOM
+
+
+                                  *syntaxe de base du jquery
+
+-$() il signifi l'appel a la librairie jquery
+
+-$(selecteur).methode  c'est la syntaxe pour aplliquer une methode a un selecteur en jquery
+
+-$('p').hide() cette methode permet de cacher mon paragraphe sur ma page web
+
+-$('.nom de la classe').methode cette syntaxe permet d'attribuer une methode a une classe precise
+ 
+-$('selecteur').methode1.methode2.methode3 cette syntaxe permet de chainer 3 methode c'est a dire appliquer 3 methode a un 
+selecteur suivant un ordre d'ecriture
+
+- $(document).ready (function()
+        {
+
+            //Notre code lquery
+        })
+cette syntaxe permet d'eviter les erreur de chargement de notre code Jquery cest a dire lorque l'on auras notre page web le
+code jquery chargera  simultanement avec notre page web 
+ 
+
   
