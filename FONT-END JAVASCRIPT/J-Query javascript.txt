@@ -378,3 +378,45 @@ h1 class="titre">bienvenue au ball</h1>
 
 cette syntaxe permet de cibler element frere du 'p'cest a dire l'element du meme niveau et de l'attribuer une couleur rouge.on pourras preciser le
 frere que l'on veut choisir $('p').siblings('ul').css('color','red')
+
+
+                      *fitrer les element html
+
+ <h1 class="titre">bienvenue au ball</h1>
+    <p>Element p parent du premier  </p>
+    <p>Element p parent du premier  </p>
+    <p>Element p parent du premier  </p>
+    <p>Element p parent du premier  </p>
+    
+   $(document).ready (function(){
+    $('p').eq(2).css('color','red')
+  
+
+cette syntaxe me permet de selectioner le troisieme de ma colection a traver le fonction 'eq' et son index et l'attribuer une couleur rouge. l'on 
+peut utiliser le fonction first()/last() pour selectionner le premmier/dernier element de la colection
+
+
+<h1 class="titre">bienvenue au ball</h1>
+    <ul>
+       <li>element numero 1 de la liste</li> 
+       <li>element numero 2 de la liste</li> 
+       <li>element numero 3 de la liste</li> 
+       <li>element numero 4 de la liste</li> 
+    </ul>
+
+    <table>
+        <tr><th>prenom</th><th>nom</th></tr>
+        <tr><td>durant</td><td>lucass</td></tr>
+        <tr><td>victoire</td><td>nana</td></tr>
+        <tr><td>orine</td><td>kemayou</td></tr>
+    </table>
+
+ <script>
+
+$(document).ready (function(){
+    $('li').filter(':nth-child(even)').css('color','red')
+    $('tr').filter(':nth-child(odd)').css('background-color','blue') 
+
+cette methode nous permet de filter nos element selon qu'ils on une position paire et impaire et les attribuer une couleur particuliere pour cela 
+on a utilisé lq methode 'filter' ayant en argument 'even' et 'odd'. pour faire l'opposé de ce que l'on viens de realiser on utilisera la
+ methode'not' a la place de filter prenant toujour en compte les meme aguments 'even' et 'odd'
