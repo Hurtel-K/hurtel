@@ -195,3 +195,56 @@ cette syntaxe permet de m'afficher 'nouvelle option selectionée' lorque je chan
 })
 
  cette syntaxe permet  envoyer un formulaire et d'afficher une boite de dialogue pour confirmer l'envoi de ce  formulaire
+
+
+
+                                                  *gestion des evenements avancé
+
+Dans les gestions des evenements avancés nous aurons la posiblilité de combiner plusieur methode en une seul ce qui nous facilitera la tache dans
+notre code
+
+-la fonction ON qui peut jumeler deux autre fontion a la fois Exp:
+ 
+<div class="div1">
+        <p>bienvenue chez nous </p>
+        <p> bon voyage</p>
+    </div>
+    <span id="msg"></span>
+
+    $(".div1").on({
+     mouseenter: function(){
+    $('#msg').text('vous etes entré dans la div')
+     },
+     mouseleave:function(){
+   $('#msg').text('vous etes sorti de    la div')
+     }
+    })
+
+cette syntaxe nous permet de creer une div ,y mettre deux paragraphe, faire une fonction 'ON' qui nous affichera dans un 'span' 'vous etes entré 
+dans la div' lorsque la souris se trouvera dans la div;'vous etes sortir de la div' lorque la souris se trouvera or de la div
+
+  *gestionaire d'evenement 'off' et 'on'
+
+
+
+       <button id="b1">pas de click possible</button>
+       <button id="b2">ajouter un gestionaire click</button>
+       <button id="b3">suprimmer un gestionaire click </button><br>
+    <span id="msg">boutton cliquer</span>
+
+  $('#msg').hide()
+    
+     $("#b2").click( function(){
+     $('#b1').on('click',function(){
+     $('#msg').show()
+    })
+    $("#b1").text('vous pouvez maintenant me cliquer')
+})
+    $("#b3").click( function(){
+     $('#b1').off('click')
+   $('#b1').text('plus de click possible')
+   $('#msg').hide()
+})
+
+cette syntaxe nous permet de creer trois boutton en suite lorsque l'on click sur le deuxiemme boutton cela permet d'ajouter un gestionaire d'eve
+nemet au premier boutton,lorque l'on click sur le troisiemme bouton on a la posibilité de suprimmer le gestion d'evenement au premier boutton
