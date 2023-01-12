@@ -337,4 +337,44 @@ l'attribu de la classe de h2 et en suit on defini deux attributs a la balise 'a'
             '<br>valeur propriété :'+ v.prop('checked'))
     }) 
  cette syntaxe d'attribuer une proiper  au chcekbox de telle sorte que lorsqu'il est coché la proprieté est a vrai ;et a faux lorsqu'il est 
-decoché
+decoché  
+
+
+                        *se deplacer dans le DOM en jquery
+
+ h1 class="titre">bienvenue au ball</h1>
+    <p>Element p parent du <Span>premier span</Span> </p>
+    <ul>
+        <li>Element li parent du <span>spa n°2</span></li>
+        <li>deuxieme Element li</li>
+    </ul>
+
+ $('span').parent().css('color','red')
+
+ cette syntaxe permet de cibler elementparent du span et de l'attribuer une couleur rouge .elle pocede deux autre fonction 'parents' et 
+'parentUntil'  
+ 
+
+ h1 class="titre">bienvenue au ball</h1>
+    <p>Element p parent du <Span>premier span</Span> </p>
+    <ul>
+        <li>Element li parent du <span>spa n°2</span></li>
+        <li>deuxieme Element li</li>
+    </ul>
+
+ $('p').children().css('color','red')
+
+cette syntaxe permet de cibler element enfant direct du 'p' et de l'attribuer une couleur rouge . si l'on veut cibler tout les elements enfants 
+ de 'p'dans un code dans ce cas on utilisera find('*')
+
+h1 class="titre">bienvenue au ball</h1>
+    <p>Element p parent du <Span>premier span</Span> </p>
+    <ul>
+        <li>Element li parent du <span>spa n°2</span></li>
+        <li>deuxieme Element li</li>
+    </ul>
+
+ $('p').siblings().css('color','red')
+
+cette syntaxe permet de cibler element frere du 'p'cest a dire l'element du meme niveau et de l'attribuer une couleur rouge.on pourras preciser le
+frere que l'on veut choisir $('p').siblings('ul').css('color','red')
