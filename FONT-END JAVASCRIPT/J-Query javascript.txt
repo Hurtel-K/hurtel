@@ -248,3 +248,93 @@ dans la div' lorsque la souris se trouvera dans la div;'vous etes sortir de la d
 
 cette syntaxe nous permet de creer trois boutton en suite lorsque l'on click sur le deuxiemme boutton cela permet d'ajouter un gestionaire d'eve
 nemet au premier boutton,lorque l'on click sur le troisiemme bouton on a la posibilité de suprimmer le gestion d'evenement au premier boutton
+
+                                           *selestion et modification d'un element html
+
+
+    
+    <h1 >bienvenue</h1>
+    <SPan id="text"></SPan>
+
+ 
+    let taille= $('h1').css('font-size')
+
+    $('#text').text(taille)
+     
+ cette syntaxe joue le role de GETEUR c'est a dire quelle permet de recuper la la taill de element h1 et de l'efficher dans un span
+
+  <h1 >bienvenue</h1>
+    <SPan id="text"></SPan>
+
+ $('h1').css('font-size','50px')
+    
+    let taille= $('h1').css('font-size')
+
+    $('#text').text(taille)
+
+
+par contre celle si va jouer le role de SETEUR et un GETEUR c'est a dire attribuer une taille de 50px a notre element h1 ,la recuperer et afficher
+ dans le span
+ 
+ 
+<label for="prenom">Entrer un prenom</label>
+    <input type="text" name="prenom" id="prenom">
+    <span id="sp1"></span><br>
+
+    <select multiple="multiple">
+<option >option1</option>
+<option >option2</option>
+<option >option3</option>
+    </select>
+
+    <span id="sp2"></span>
+      
+    $('#prenom').keyup(function(){
+        let valeurinput=$(this).val()
+        $('#sp1').text(valeurinput)
+    })
+
+    $('select').change(function(){
+        var valeurinput2=$('select').val() || []
+        $('#sp2').text(valeurinput2.join(', '))
+    })
+     
+cette syntaxe permet de recuperer a chaque foi la derniere valeur saisi/choisi dans le input/selectet l'afficher dans un span
+
+  <h1 class="titre">bienvenue au ball</h1>
+    <h2 class="t2">bienvenue pap pot</h2>
+    <a > un lien</a>
+    <span id="text"> </span>
+
+ 
+  let atth1=$('h1').attr('class')
+ $('#text').text('valeur de la classe de h1 :'+ atth1)
+
+ $('h2').attr('class','titre')
+  
+ $('a').attr({
+    href:'http://pierre-giraud.com',
+    target: '_black'
+ })
+
+cette syntaxe nous permet de recuperer la valeur de l'attribut de la class h1 et l'efficher dans notre span en suite on modifier la valeur de 
+l'attribu de la classe de h2 et en suit on defini deux attributs a la balise 'a' associés a des valeurs
+
+
+  <h1 class="titre">bienvenue au ball</h1>
+   <label for="c">coucher/decoucher la case</label>
+   <input type="checkbox" id="c" checked="checked">
+
+
+<span id="test"></span>
+  
+    $('#c').change(function(){
+       
+        let v=$(this)
+
+        $('#test').html(
+            '<br>valeur attribut:'+ v.attr('checked')+
+            '<br>valeur propriété :'+ v.prop('checked'))
+    }) 
+ cette syntaxe d'attribuer une proiper  au chcekbox de telle sorte que lorsqu'il est coché la proprieté est a vrai ;et a faux lorsqu'il est 
+decoché
