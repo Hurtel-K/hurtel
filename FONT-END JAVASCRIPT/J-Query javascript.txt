@@ -457,3 +457,79 @@ ajoutera l'element avant le paragraphe au non au debut
 
 cette syntaxe me permet de suprimer mon premier paragraphe lorsque l'on click sur le bouton1 ;suprimer mon deuxieme paragraphe lorsque l'on click 
 sur le bouton2 .on utilise la methode 'remove' on poura ausi utilise la methode 'empty' 
+ 
+
+                                   *Autre operation sur le DOM
+
+
+<h1 class="titre">bienvenue au ball</h1>
+   <p id="p1">premier paragraphe</p>
+   <p id="p2">deuxieme paragraphe</p>
+ <button id="b1">remplacer l'element p1 </button><br>
+   <span id="msg"></span>
+
+
+ $('#b1').click(function(){
+        var rpl= $('#p1').replaceWith('<h2> un titre h2</h2>')
+    $('#msg').text(' ancien text: '+ rpl.text())
+    })  
+
+cette methode me permet de remplacer  un paragraphe par un  titre lorsque l'on click sur le bouton et affiche l'ancien paragraphe dans un span on 
+utile la methode 'replaceWith' l'on poura aussi utliser la methode 'replaceall' 
+ 
+<style>
+    div{
+        margin: 5px;
+        padding: 5px;
+    }
+    .wrap{border: 1px solid red;}
+    .wrapA{border: 1px solid blue;}
+    .wrapI{border: 1px solid lime;}
+  </style>
+
+
+<h1 class="titre">bienvenue au ball</h1>
+   <p class="toWrap">premier paragraphe</p>
+   <p class="toWrap">deuxieme paragraphe</p><br>
+
+   <button id="b1">ajouter le wrap</button>
+   <button id="b2">suprimer le wrap</button><br>
+
+   <p class="toWrapAll">troisieme paragraphe</p>
+   <p class="toWrapAll">4 paragraphe</p><br>
+
+   <button id="b3">ajouter le wrapAll</button>
+   <button id="b4">suprimer le wrapAll</button><br>
+
+   <p class="toWrapInner">5 paragraphe</p>
+   <p class="toWrapInner">6 paragraphe</p><br>
+
+   <button id="b5">ajouter le wrapInner</button>
+   <button id="b6">suprimer le wrapInner</button>
+
+   
+    $('#b1').click(function(){$('.toWrap').wrap('<div class="wrap"></div>')})
+    
+    $('#b2').click(function(){ $('.toWrap').unwrap()})
+
+
+    $('#b3').click(function(){$('.toWrapAll').wrapAll('<div class="wrapA"></div>')})
+       
+    $('#b4').click(function(){$('.toWrapAll').unwrap()}) 
+
+
+    $('#b5').click(function(){$('.toWrapInner').wrapInner('<div class="wrapA"></div>')})
+       
+    $('#b6').click(function(){$('.toWrapInner').unwrap()}) 
+
+cette methode nous permet:
+
+-d'entourer le paragraph1 et le paragraphe2 avec chacun une div lorque l'on click sur le bouton 'b1' et le suprime lorsque l'on click sur le bouton
+'b2' methode'wrap'et 'unwrap'
+
+-d'entourer les paragraphe 3 et 4 avec une seul div lorque l'on click sur le bouton 'b3' et le suprime lorsque l'on click sur le bouton  'b4'
+methode'wrapAll' et 'unwrap'
+
+-d'entourer le contenue des  paragraphe 5 et 6 avec chacun une div lorque l'on click sur le bouton 'b6' et le suprime lorsque l'on click sur le 
+bouton 'b6' methode 'wrapInner' et 'unwrap' 
+         
