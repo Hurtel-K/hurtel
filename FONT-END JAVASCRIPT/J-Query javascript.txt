@@ -22,7 +22,7 @@ plusieur tratitement
 -ducument .querySelector('nom d'un element').append(new'nom de element crée') permet d'ajouter un element cree a un 
 element existant 'prepend' pour le mettre au debut et append pour le mettre ala fin
 
--'balise1'.insertAdjacentElement('nom de la position','balise2')cette requette nous permet inserer la balise2 a une
+-'balise1'.insertAdjacentElement('nom de la position','balise2')cette requette  nous permet inserer la balise2 a une
 position precise par rapport a la balise1 elle prend en parametre les positions 'afterbegin','beforebegin','afterEnd','beforeEnd'
 
 -'nom de l'element'.REMOVE() permet de supprimer un element dans dans le DOM
