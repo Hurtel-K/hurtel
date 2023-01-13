@@ -623,3 +623,31 @@ lorque l'on effectue un click sur le bouton'changer le taille',nos paragraphes p
 span 
 
 NB.l'on pour utiliser les methodes 'innerwidth' et 'innerheight' pour recuperer la largeur et la hauteur d'un element e=avec leur padding
+
+                                         
+                                                              *afficher et cacher des elements
+
+
+
+        <p> premier paregraph</p>
+        <p>deuxieme paregraph</p>
+        <span id="sp1"></span><br>
+      <button id="b1"> afficher les paregraph</button>
+      <button id="b2"> cacher les paragraph</button>
+      
+$("#b1").hide()
+      
+     $("#b2").click(function(){
+      
+     $("p").hide(1000,function(){
+   $('#sp1').text('paragraphe cacher') })
+
+     $("#b1").show()
+    })
+    
+    $('#b1').click(function(){
+     $("p").show(1000,function(){
+         $('#sp1').text('paragraphe reaficher')})
+      
+ cette syntaxe nous permet de cacher nous paragraphe en un temp precisé lorsque l'on press sur le bouton2 en suite de l'afficher a nouveau en un 
+temp precisé lorsque l'on appuis sur le bouton2
