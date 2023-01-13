@@ -585,3 +585,41 @@ var taille =$('p').css('font-size')
 
 cette syntaxe me permet d'utiliser le css comme GETEUR dans le cas ou il nous renvoie taille de notre paragraph ,comme SETEUR dans le cas ou l'on 
 atribue  une couleur et une police a notre paragraph en cliquant sur le bouton 'b1'  
+
+                                     
+                                                  *gestion des dimension
+ 
+  <style>
+    p{margin: 10px;padding: 20px;border: 1px solid black;}
+    
+  </style>
+
+        <p> premier paregraph</p>
+        <p>deuxieme paregraph</p>
+        
+       <span id="sp1"></span><br><br>
+        <span id="sp2"></span><br>
+   
+   <button id="b1">changer la taille</button> 
+
+
+var l1= $('p').width()
+    var h1 =$('p').height()
+     $('#sp1').text('taill de depart: ' + h1 +'*'+l1+'px')
+   
+     $("#b1").click(function(){
+       
+        $('p').width('300px')
+        $('p').height('100px')
+
+    var l2= $('p').width()
+    var h2 =$('p').height()
+
+    $('#sp2').text(' nouvelle taille : ' + h2 +'*'+l2+'px')
+     })
+
+ cette syntaxe nous permet dans un premier temp d'attribuer une hauteu et un largeur a nos paragraphes,les afficher dans un premier 'span' en suite
+lorque l'on effectue un click sur le bouton'changer le taille',nos paragraphes prenent une nouvelle taille et affiche cette taille dans le  secon
+span 
+
+NB.l'on pour utiliser les methodes 'innerwidth' et 'innerheight' pour recuperer la largeur et la hauteur d'un element e=avec leur padding
