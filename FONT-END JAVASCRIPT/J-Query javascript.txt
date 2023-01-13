@@ -532,4 +532,56 @@ methode'wrapAll' et 'unwrap'
 
 -d'entourer le contenue des  paragraphe 5 et 6 avec chacun une div lorque l'on click sur le bouton 'b6' et le suprime lorsque l'on click sur le 
 bouton 'b6' methode 'wrapInner' et 'unwrap' 
+           
+
+                                    *modification du style css de element html
+
+  <style>
+    div{
+        border: 1px solid black;
+    }
+    .defaut{font-size: 30px;}
+    .orange{background-color: orange;}
+    .gras{font-weight: bold;}
+    .center{text-align: center;}
+    
+  </style>
+
+<div id="monDiv" class="defaut">
+        <p> premier paregraph</p>
+        <p>deuxieme paregraph</p>
+    </div>
+
+    <button id="b1"> ajouter </button>
+    <button id="b2"> suprimer </button>
+
+ 
+   $('#b1').click(function(){
+    $('#monDiv').addClass('orange gras center')
+   })
+   $('#b2').click(function(){
+    $('#monDiv').removeClass('defaut orange gras center')
+   })
+
+cette methode permet dans un premier temp d'attribuer les classe de style css a ma 'div' en cliquant sur le bouton 'b1' et les suprimer en cliquant 
+sur le bouton 'b2' on utilise la methode 'addClasse' et 'removeClass' on pourra aussi utiliser la methode 'toggleClass' pour ajouter une classe si
+elle n'existe pas davance et la suprimer si elle est deja presente.
+
+ <p> premier paregraph</p>
+        <p>deuxieme paregraph</p>
+    
+   <br> <span id="msg"></span><br>
+
+    <button id="b1"> modifier la couleur  et le poid des paragraphe </button>
+
+
+var taille =$('p').css('font-size')
+   
+    $('#msg').text('taille du text de bas:' + taille)
+    
+    $('#b1').click(function(){
          
+     $('p').css({'color':'orange','font-family':'wide latin'})
+
+cette syntaxe me permet d'utiliser le css comme GETEUR dans le cas ou il nous renvoie taille de notre paragraph ,comme SETEUR dans le cas ou l'on 
+atribue  une couleur et une police a notre paragraph en cliquant sur le bouton 'b1'  
