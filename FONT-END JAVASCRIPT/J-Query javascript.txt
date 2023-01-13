@@ -420,3 +420,40 @@ $(document).ready (function(){
 cette methode nous permet de filter nos element selon qu'ils on une position paire et impaire et les attribuer une couleur particuliere pour cela 
 on a utilisé lq methode 'filter' ayant en argument 'even' et 'odd'. pour faire l'opposé de ce que l'on viens de realiser on utilisera la
  methode'not' a la place de filter prenant toujour en compte les meme aguments 'even' et 'odd'
+
+                                            
+                                               *insertion et supression du contenue html
+
+<h1 class="titre">bienvenue au ball</h1>
+   <p id="p1">premier paragraphe</p>
+   <p id="p2">deuxieme paragraphe</p>
+ <button id="b1">utiliser append </button>
+   <button id="b2">utiliser prepend</button>
+
+$('#b1').click(function(){
+    $('#p1').append(' text insere avec append')
+    })   
+     $('#b2').click(function(){
+       $('#p2').prepend(' text insere avec prepend')
+
+cette syntaxe permet d'inserer un text dans un contenu html a l'aide de deux boutton . lorsque l'on cliquera sur le premier boutton il ajoutera du
+text a la suite du premier paragraphe :c'est la methode 'append';lorsque l'on cliquera sur le deuxieme boutton il ajoutera du text a la suite du 
+deuxieme paragraphe :c'est la methode 'prepend'
+ 
+NB.l'on peut aussibutilitser la methode 'after' et 'before' la diffirence AFTER ajoutera l'element apres le paragraphe au non a la suite et BEFORE 
+ajoutera l'element avant le paragraphe au non au debut 
+
+  <p id="p1">premier paragraphe</p>
+   <p id="p2">deuxieme paragraphe</p>
+ <button id="b1">suprimer p1 </button>
+   <button id="b2">suprimer p2</button>
+
+ $('#b1').click(function(){
+    $('p').remove(' #p1')
+    })   
+     $('#b2').click(function(){
+       $('p').remove('#p2')
+     })
+
+cette syntaxe me permet de suprimer mon premier paragraphe lorsque l'on click sur le bouton1 ;suprimer mon deuxieme paragraphe lorsque l'on click 
+sur le bouton2 .on utilise la methode 'remove' on poura ausi utilise la methode 'empty' 
