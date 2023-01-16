@@ -717,3 +717,63 @@ NB2: il est possible de chainer plusieur methode a la foi elle s'executerons a l
  $("h1").animate({left:'100px'},1000) }).fadeTo(1000,0.5).css(color:'red')
 
   
+                          *Gestion avancé d'animation
+
+    <h1>premier paregraph</h1> 
+      
+      <button id="b1"> kkkk</button>
+      <p>taille de la queue : <span></span></p>
+       
+
+     $("#b1").click(function(){
+
+        $("h1").animate({width:'-=10%'},1000)
+        .animate({fontSize:'20px'},1000)
+        .fadeTo(1000,0.5) 
+      })
+
+      function enAttente(){
+         var n= $('h1').queue('fx')
+         $('span').text(n.length)
+         setTimeout(enAttente,10)
+      }
+      enAttente()
+
+cette methode permet de me donner la taille de la queue avant l'execution de la methode en suite m'indique la taille de la queue au fut et a mesure
+que la methode s'execute
+
+ div{
+      background-color: orange;
+      border: 2px solid black;
+      position: relative;
+      width: 50px;
+      height: 50px;
+   }
+   .bleu{
+      background-color: blue;
+   }
+
+ <button id="b1"> kkkk</button>
+     <div></div>
+
+
+
+     $("#b1").click(function(){
+
+      $("div")
+        .animate({left:'+=200px'},1000)
+        .animate({top:'+=50px'},400)
+        .queue(function(){
+         $(this).toggleClass('bleu').dequeue()
+        }) 
+        .animate({left:'+=200px'},1000)
+        .animate({top:'+=50px'},400)
+      })
+
+cette fonction permet de rajouter une fonction de rappel en deuxieme argument de notre methode queue pour pouvoir ajouteer les animation suplementaire
+autrement dit  elle fait decaler mon div vers la gauche en suite vers le bas en suite ajoute une queue qui changera la classe  du div en suite le
+decalera a nouveau vers le bas en suite vers la gauche 
+
+NB:la fontion clearQueue permet de stop les animations qui ne son pas encoe executees lors de l'execution de nos differentes animation 
+
+la methode 'delay' nous permetras de creer un delais entre les animation avec l'execution de l'animation suivante
