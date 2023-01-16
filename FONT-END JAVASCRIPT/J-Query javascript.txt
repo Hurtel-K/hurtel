@@ -684,3 +684,36 @@ on utilise les methodes'fadeout' et 'fadeIn'  on utilisera 'slideUP' et 'slideDo
      })  
 
 cette methode permet d'opacifier mes paragraphe
+
+                                      
+                                           *animation personalisée
+
+
+ <h1>premier paregraph</h1> 
+      
+      <button id="b1"> kkkk</button>
+      <button id="b2"> hhhh</button>
+      <button id="b3"> kkkk</button>
+     
+ $("#b1").click(function(){
+
+        $("h1").animate({width:'-=10%'},1000) })
+
+        $("#b2").click(function(){
+
+         $("h1").animate({fontSize:'20px'},5000) })
+
+         $("#b3").click(function(){
+
+         $("h1").animate({left:'100px'},1000) })
+
+ cette methode permet de reduire la largeur de mon text en un temp precis lors du click sur lr bouton b1,en suite elle reduit la taille de mon text
+ en un temp precis lors du click sur lr bouton b2 et en fin elle deplace mon text vers la gauche en un temps precis lors du click sur le bouton b3
+
+NB1:il est possible de combiner ces trois methode en une seul EXemple: $("h1").animate({left:'100px',width:'-=10%',fontSize:'20px'},1000) })
+
+NB2: il est possible de chainer plusieur methode a la foi elle s'executerons a la suite de la precedente EXemple:
+
+ $("h1").animate({left:'100px'},1000) }).fadeTo(1000,0.5).css(color:'red')
+
+  
