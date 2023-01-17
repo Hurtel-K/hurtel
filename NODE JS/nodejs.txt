@@ -24,3 +24,29 @@ cette methode permet d'ajouter du contenue a l'interieur d'un fichier a travers 
 'unlink' va nous permetre de suprimmer un fichier
 'stat' va nous donner les information sur le fichier
 'open' va nous permetre d'ouvrir le fichier 'closefile'pour le fermer
+
+
+                                   *notre premier serveur
+
+import fs from 'node:fs'
+import http from 'node:http'
+
+
+let server=http.createServer()
+  
+server.on('request',function(request,response){
+      
+    fs.readFile('index.html',function(err,data){
+    if(err) throw err;
+
+        response.writeHead(200, { 'content-type':'text/html; charset=utf-8' });
+
+        
+        response.end(data);
+   
+    }); 
+});
+
+server.listen(8080);
+
+cette syntaxe permet de creer un serveur en suite lit le contenue de notre fichier html dans ce serveur
