@@ -1,0 +1,26 @@
+                               *lire et ecrire les fichiers
+
+
+import fs, { readFile } from 'node:fs/promises'
+
+const content=await readFile('demo.txt',{encoding: 'utf8'})
+    
+console.log(content)
+
+
+console.log('hello')
+
+cette syntaxe permet de lire le contenue du fichier 'demo' on utilise la methode 'readFile'
+
+import fs, { writeFile } from 'node:fs/promises'
+
+await writeFile('demo.txt',' bonjour gars ces sales',{
+    flag:'a'
+
+})
+
+cette methode permet d'ajouter du contenue a l'interieur d'un fichier a travers la methode 'write file'
+'copyFile'va nous permetre de copier un fichier
+'unlink' va nous permetre de suprimmer un fichier
+'stat' va nous donner les information sur le fichier
+'open' va nous permetre d'ouvrir le fichier 'closefile'pour le fermer
