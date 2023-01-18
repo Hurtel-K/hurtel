@@ -83,3 +83,24 @@ differentes syntaxe en les bloquant dans une varriable en suite  l'on pourra fai
  
 - npm est un gestionnaire de paquet par defaut pour l'environnement d'execution javaScript node js .grace a l'npm on pouras intaller un module que 
 l'on souhaite utiliser comme express js   
+
+                                                     
+
+                                            *express js :instalation,premier 'hello expree'
+
+
+
+const { request, response } = require('express')
+let express= require('express')
+
+let app = express()
+let port=3000
+
+app.get('/',(req,res)=>res.send('hello express'))
+
+app.listen(port,()=>console.log('Notre application node est demare sur:http://localhost:${port}'))
+
+
+cette syntaxe permet de recuperer notre paquet express et on cree une instence de ce dernier en suite on defini notre port en l'attribuant une valeur
+en suite on defini un point de terminaison et en fin on demare api sur le port 
+ 
