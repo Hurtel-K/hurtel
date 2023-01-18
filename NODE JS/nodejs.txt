@@ -103,4 +103,17 @@ app.listen(port,()=>console.log('Notre application node est demare sur:http://lo
 
 cette syntaxe permet de recuperer notre paquet express et on cree une instence de ce dernier en suite on defini notre port en l'attribuant une valeur
 en suite on defini un point de terminaison et en fin on demare api sur le port 
- 
+                              
+
+                                     *comprendre les routeur d'expresse
+
+
+les routes d'express je se resume aux differentes operation que l'on peut effectuer sur Express js notament
+
+- le 'get' pour recuperer les informations
+
+- le'post' pour emettre des information 
+
+- le'put' pour modifier les information  
+
+- le'delete' pour supprimer les informations 
