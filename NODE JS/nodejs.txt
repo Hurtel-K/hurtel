@@ -108,7 +108,7 @@ en suite on defini un point de terminaison et en fin on demare api sur le port
                                      *comprendre les routeur d'expresse
 
 
-les routes d'express je se resume aux differentes operation que l'on peut effectuer sur Express js notament
+les routes d'express se resume aux differentes operation que l'on peut effectuer sur Express js notament
 
 - le 'get' pour recuperer les informations
 
@@ -117,3 +117,26 @@ les routes d'express je se resume aux differentes operation que l'on peut effect
 - le'put' pour modifier les information  
 
 - le'delete' pour supprimer les informations 
+
+
+                                
+                                     *passer un parametre depuis url avec Express js
+
+
+
+const express= require('express')
+
+const app = express()
+const port=3000
+
+
+app.get('/api/pokemon/:id',(req,res)=>{ 
+    const id = req.params.id
+    res.send(`vous avez demander le pokemon no ${id} `)
+
+})
+
+
+app.listen(port,()=>console.log(`Notre application node est demare sur:http://localhost:${port}`))
+
+cette syntaxe permet de passer le parametre id depuis url qui permetras l'acces rapide a une page de notre site
