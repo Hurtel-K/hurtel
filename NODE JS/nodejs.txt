@@ -72,3 +72,14 @@ let red=0
             console.log('close')})
 
 cette syntaxe me permet de lire un fichier par Stream autrement dit le lire par partie egale en donant le pourcentage evolution d lecture
+
+
+                                                
+
+                                                          *les modules et npm
+
+-les modules nous permet de gerer de façon mieux organisé notre code son role c'est de creer un fichier externe dans lequelle l'on pourra enoncer nos 
+differentes syntaxe en les bloquant dans une varriable en suite  l'on pourra faire appel a cette variable dans notre code tout simplement en important
+ 
+- npm est un gestionnaire de paquet par defaut pour l'environnement d'execution javaScript node js .grace a l'npm on pouras intaller un module que 
+l'on souhaite utiliser comme express js   
