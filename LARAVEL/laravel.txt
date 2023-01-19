@@ -1,0 +1,25 @@
+                                      *les routes de base
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+ 
+cette syntaxe permet de revoyer une la page d'acceuil de notre page web laravel
+
+
+Route::get('/posts', function () {
+    return 'liste d\'article';
+});
+ 
+cette syntaxe permet de creer une deuxieme page sur notre site et affiche liste d'article
+
+
+Route::get('/post', function () {
+    return response() ->json([
+        'title'=> 'mon titre',
+        'description'=>'ma description'
+    ]);
+});
+ cette syntaxe me permet de renvoyer un json
+ 
