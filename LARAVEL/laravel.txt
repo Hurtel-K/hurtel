@@ -22,4 +22,30 @@ Route::get('/post', function () {
     ]);
 });
  cette syntaxe me permet de renvoyer un json
+
+
+                                            *les controleurs
+
+<?php
+
+namespace app\http\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class postcontroller   extends Controller
+{
+
+    public function index(){
+
+        return view ('article');
+    }
+
+} 
+
+Route::get('/','App\Http\Controllers\postcontroller@index');
+
+
+cette syntaxe permet de creer un controleur  ayant pour index une vue  en suite on appel ce controleur qui nous affichera la vue
+
+
  
