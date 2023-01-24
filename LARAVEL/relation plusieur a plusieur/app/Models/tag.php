@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Post;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class tag extends Model
+{
+    use HasFactory;
+
+    
+public function posts(){
+    return $this->BelongsToMany(Post::class);
+}     
+}
