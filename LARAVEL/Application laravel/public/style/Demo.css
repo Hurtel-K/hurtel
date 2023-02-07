@@ -1,0 +1,246 @@
+
+
+.bar-navigation
+{
+    background-color: rgb(0, 0,0, 0.55);
+    font-family: Merriweather-black;
+    box-shadow: 1px 1px 3px rgb(255,255,255,0.54);
+    
+position: fixed;
+width: 100%;
+}
+.bar-navigation .nav-link
+{
+border-bottom: 1px  solid transparent;
+transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
+
+}
+.bar-navigation .nav-link:hover{
+    padding-bottom: 20px;
+    border-bottom-color: var(--bs-teal) ;
+}
+    .Bienvenue{
+
+        font-family: redressed;
+        text-align: center;
+        font-size: 70px;
+    }
+
+    .Liste-article-chapitre
+    {
+       color: white;
+       font-size: 25px; 
+    }
+    .titre-chapitre{
+        font-family: redressed;
+    }
+    .demo{
+        background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/Demo5.PNG") center center fixed
+       no-repeat;
+        height: 1200px;
+        background-size: cover;}
+     .acceuil
+    {
+       padding-top: 100px; 
+       color: white;
+    }
+    .view-article{
+        background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/Demo1.PNG") center center fixed
+       no-repeat;
+        height: 1200px;
+        background-size: cover;}
+
+.ajout{
+    font-family: redressed;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+} 
+.input-group{
+    width: 500px;
+    font-family: merriweather;
+}
+.containere{
+    display: flex;
+
+}
+button{
+    
+    font-family: merriweather;
+    color: var(--bs-teal);
+    border-color:var(--bs-teal);
+    transition: 0.5s;
+    width: 200px;
+    height: 50px;
+    border: 5px solid var(--bs-teal)  ;
+    border-radius: 10px ;
+    box-shadow: 10px 10px 10px  white ;
+    margin-left: 40px;
+
+}
+
+button:hover, 
+button:hover
+{
+    color: white;
+background-color:var(--bs-teal);
+
+
+}
+.row{text-align: center;
+    margin: 30px;
+
+
+}
+
+.view-chapitre{
+    background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/Demo3.PNG") center center fixed
+   no-repeat;
+    height: 1200px;
+    background-size: cover;}
+ .errors{
+    color: red;
+    font-family:  redressed; 
+    font-size: 30px;
+}
+.reponse
+{
+    background-color:black;
+    height: 100pc;
+}
+.re{
+  font-family: wide latin;
+  text-align: center;
+  font-size: 100px;
+  padding-top: 200px;
+  color:var(--bs-teal) ;
+}
+h6{
+    color:var(--bs-teal);
+}
+span
+{
+color: white;
+text-align: right;
+
+}
+.menus{
+    padding-top: 200px;
+    padding-left:200px ;
+    padding-right: 200px;
+    border-bottom: 20px  solid transparent;
+transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
+   
+}
+.menus:hover{
+    padding-bottom: 10px;
+    border-bottom-color: var(--bs-teal)
+}
+.text
+{
+    padding-top: 100px;
+font-family: redressed;
+}
+
+
+.article-chapitre{
+    background: linear-gradient( rgba(0,0,0,0.5),rgb(0,0,0,0.5)),url("../image/Demo2.PNG") center center fixed
+   no-repeat;
+    height: 1200px;
+    background-size: cover;}
+
+    
+.tableau{
+
+    border: 10px solid var(--bs-teal)  ;
+    border-radius: 40px ;
+    box-shadow: 10px 10px 10px  white inset;
+    font-family: merriweather;
+    color: white;
+    width: 1300px;
+}
+.variable-chapitre{
+    margin-left:210px ;
+    color :var(--bs-teal)  ;
+    
+}
+.variablee{
+
+    width: 400px;
+    
+    
+}
+
+.variable-article{
+    margin-left: 20px;
+    color :var(--bs-teal)  ;
+   
+}
+.variable{
+ 
+   padding-bottom: 40px;
+    width: 250px;
+}
+a{
+    color :var(--bs-teal)  ;
+    
+    text-decoration: none;
+}
+
+.principale{
+    display: flex;
+
+    
+}
+.suprimmer{
+    margin-left: 10px;
+    margin-top: 99px;
+
+        
+    }
+    .fas
+{
+    background-color: var(--bs-teal);
+    color: white;
+    font-size: 20px;
+    border: 10px solid var(--bs-teal);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--bs-teal);
+    
+
+}
+.suprim
+{
+    
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: 10px solid red;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px  red;
+    
+
+}
+.icone{
+   
+    padding-bottom: 24px;
+   
+}
+
+
+.colll
+{
+    width: 250px ;
+
+    padding-bottom: 40px;
+    
+}
+
+.Liste-article-
+{
+   color: white;
+   font-size: 25px; 
+   padding-left: 20px;
+   margin-top: 10px;
+}
