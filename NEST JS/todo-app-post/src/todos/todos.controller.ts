@@ -1,4 +1,5 @@
 import { Body, Controller, Get,Post,Param} from '@nestjs/common';
+import { CreateTodoDto } from './DTO/create-todo.dto';
 import { Todo } from './interfaces/todo.interface';
 import { TodosService } from './todos.service';
 
@@ -21,8 +22,7 @@ findAll(): Todo[] {
    
  @Post()
 
- createTodo(@Body() newTodo) {
-  console.log('newTodo',newTodo);
+ createTodo(@Body() newTodo:CreateTodoDto) {
 this.todosservice.create(newTodo);
  }
 }
