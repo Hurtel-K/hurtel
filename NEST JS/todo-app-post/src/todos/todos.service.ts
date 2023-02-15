@@ -67,4 +67,16 @@ const todoToUpdate = this.todos.find(t => t.id === +id);
   this.todos = [...updatedTodos];
   return { updatedTodo: 1, todo:todoToUpdate};
 }
+
+delete(id:string){
+
+    const nbOfTodoBeforeDelete = this.todos.length;
+    this.todos = [...this.todos.filter(t => t.id !== +id)];
+    if(this.todos.length < nbOfTodoBeforeDelete ) {
+        return{ deletedTodos: 1, nbTodos:this.todos.length};
+    }
+    else{
+        return{ deletedTodos: 0, nbTodos:this.todos.length}; 
+    }
+}
 }
