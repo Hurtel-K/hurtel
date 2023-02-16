@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoModule } from './todo/todo.module';
+import { ChapitreModule } from './todo/chapitre.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { TodoModule } from './todo/todo.module';
       entities: [ 'src/entity/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
-    TodoModule
+    TodoModule,
+    ChapitreModule
   ],
   controllers: [AppController],
   providers: [AppService],

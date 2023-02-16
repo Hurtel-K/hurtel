@@ -17,7 +17,10 @@ export class TodoService {
   findAll(): Promise<Todo[]> {
     return this.todoRepository.find();
   }
-
+ 
+  // getTodoById(id:number){
+  //   return this.todoRepository.findOne(id);
+  // }
   findOne(id: number): Promise<Todo> {
     return this.todoRepository.findOneBy({ id });
   }
@@ -54,4 +57,6 @@ export class TodoService {
     await this.todoRepository.delete(id);
   return {message:'supression effectuer'};
   }
+
+  
 }

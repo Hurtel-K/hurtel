@@ -1,5 +1,6 @@
 
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Chapitre } from './chapitre.entity';
 
 @Entity()
 export class Todo {
@@ -14,4 +15,7 @@ export class Todo {
 
   @Column({ default: true })
   isActive: boolean;
+  
+  @OneToMany(type => Chapitre, (chapitre) => chapitre.todo)
+  chapitres: Chapitre[];
 }
