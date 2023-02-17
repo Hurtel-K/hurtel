@@ -20,6 +20,7 @@ export class TodoController {
 
  createTodo(@Body() newtodo:Todo) {
 this.todoservice.create(newtodo);
+return('cree avec succes');
  }
  @Patch(':id')
 updateTodo(@Param('id') id:string,@Body() todo:Todo){
