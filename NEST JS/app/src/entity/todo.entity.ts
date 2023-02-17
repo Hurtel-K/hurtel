@@ -29,7 +29,7 @@ export class Todo {
 
   @OneToMany(type => Chapitre, (chapitre) => chapitre.todo,{
     cascade:true,
-    nullable:true
+    nullable:true  
   }
      
   )
