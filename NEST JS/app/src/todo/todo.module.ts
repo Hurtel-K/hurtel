@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoService } from './todo.service';
 import { Todo } from 'src/entity/todo.entity';
 import { TodoController } from './todo.controller';
+import { TodoSubcribeDto } from './DTO/usersubcribedto';
 
 
 @Module({
@@ -12,4 +13,7 @@ import { TodoController } from './todo.controller';
   controllers: [TodoController],
   exports:[TodoService]
 })
-export class TodoModule {}
+export class TodoModule {
+
+
+}

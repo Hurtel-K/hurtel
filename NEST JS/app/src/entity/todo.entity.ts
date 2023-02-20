@@ -1,6 +1,7 @@
 
-import { IsString } from 'class-validator';
+import { IsEmpty, IsString } from 'class-validator';
 import { IsBoolean, IsNotEmpty, IsNumber } from 'class-validator';
+import { TodoRoleEnum } from 'src/emmu/todoRole.enum';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Chapitre } from './chapitre.entity';
 
@@ -17,21 +18,37 @@ export class Todo {
   @Column()
   titre: string;
 
-  @IsNotEmpty()
-  @IsString()
+  @IsEmpty()
   @Column()
   description: string;
 
-  @IsNotEmpty()
-  @IsBoolean()
+
+
+  @IsEmpty()
   @Column({ default: true })
   isActive: boolean;
 
-  @OneToMany(type => Chapitre, (chapitre) => chapitre.todo,{
-    cascade:true,
-    nullable:true  
+  @Column()
+  password: string;
+
+
+  @Column()
+  salt: string;
+
+
+  @Column({
+    type: 'enum',
+    enum: TodoRoleEnum,
+    default: TodoRoleEnum.USER
+  })
+  role: string;
+
+
+
+  @OneToMany(type => Chapitre, (chapitre) => chapitre.todo, {
+    onDelete: 'CASCADE'
   }
-     
+
   )
   chapitres: Chapitre[];
 }

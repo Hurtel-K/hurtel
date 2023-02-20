@@ -4,7 +4,7 @@ import { Todo } from './todo.entity';
 
 @Entity()
 export class Chapitre {
-  
+
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -14,10 +14,8 @@ export class Chapitre {
   @Column()
   todoId: number;
 
-  @ManyToOne(() => Todo, (todo) => todo.chapitres,{
- 
-  cascade:true,
-  nullable:true})
+  @ManyToOne(() => Todo, (todo) => todo.chapitres, { onDelete: 'CASCADE' })
+
   todo: Todo
 
 }

@@ -1,5 +1,7 @@
 import { Body, Controller,Delete,Get, Param, Patch, Post} from '@nestjs/common';
 import { Todo } from 'src/entity/todo.entity';
+import { LoginCredentialsDto } from './DTO/login dentialsDto';
+import { TodoSubcribeDto } from './DTO/usersubcribedto';
 import { TodoService } from './todo.service';
 
 
@@ -16,7 +18,7 @@ export class TodoController {
     }
     
    
- @Post()
+ @Post('/first')
 
  createTodo(@Body() newtodo:Todo) {
 this.todoservice.create(newtodo);
@@ -31,6 +33,18 @@ updateTodo(@Param('id') id:string,@Body() todo:Todo){
 @Delete(':id')
 deleteTodo(@Param('id') id:string){
   return this.todoservice.remove(id);
+}
+  
+@Post()
+
+SubcribeTodo(@Body() todoData:TodoSubcribeDto): Promise<Partial<Todo>> {
+return this.todoservice.subcribe(todoData);
+}
+ 
+@Post('login')
+
+login(@Body() credentials:LoginCredentialsDto): Promise<Partial<Todo>> {
+return this.todoservice.login(credentials);
 }
 
 }
