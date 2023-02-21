@@ -6,6 +6,7 @@ import { Repository } from 'typeorm';
 import { TodoSubcribeDto } from './DTO/usersubcribedto';
 import * as bcrypt from 'bcrypt';
 import { LoginCredentialsDto } from './DTO/login dentialsDto';
+import { JwtService } from '@nestjs/jwt/dist';
 
 @Injectable()
 export class TodoService {
@@ -17,6 +18,7 @@ export class TodoService {
   constructor(
     @InjectRepository(Todo)
     private todoRepository: Repository<Todo>,
+    private jwtService: JwtService
   ) {}
 
   findAll(): Promise<Todo[]> {
@@ -81,8 +83,7 @@ export class TodoService {
    }
  }
 //ce loger
-async login(credentials:LoginCredentialsDto):Promise<Partial<Todo>>
-{
+async login(credentials:LoginCredentialsDto){
 //recuperer le login et le mots de pass
 const {titre,password} = credentials;
 //on peut se loger ou via le todotitre ou password
@@ -100,11 +101,13 @@ throw new NotFoundException('todo ou password erroné');
 //si oui je verifie est ce que le mot de pass est correct ou non
 
 if (await bcrypt.compareSync(password, todo.password)){
-  return {
+  const payload =  {
     titre,
     role:todo.role 
 
-  }
+  };
+  const jwt = await this.jwtService.sign(payload);
+return{"access_token" : jwt}
 }
 //si mots de passe in correcte je declanche une erreu
 

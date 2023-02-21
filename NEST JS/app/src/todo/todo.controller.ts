@@ -1,7 +1,11 @@
-import { Body, Controller,Delete,Get, Param, Patch, Post} from '@nestjs/common';
+import { Body, Controller,Delete,Get, Param, Patch, Post, UploadedFile, UseGuards, UseInterceptors} from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
+import { extname } from 'path';
 import { Todo } from 'src/entity/todo.entity';
 import { LoginCredentialsDto } from './DTO/login dentialsDto';
 import { TodoSubcribeDto } from './DTO/usersubcribedto';
+import { JwtAuthGuard } from './guard/guard';
 import { TodoService } from './todo.service';
 
 
@@ -13,6 +17,7 @@ export class TodoController {
     constructor(private readonly todoservice: TodoService){}
     
     @Get()
+    @UseGuards(JwtAuthGuard)
     getAll(): Promise<Todo[]>{
         return this.todoservice.findAll();
     }
@@ -43,8 +48,31 @@ return this.todoservice.subcribe(todoData);
  
 @Post('login')
 
-login(@Body() credentials:LoginCredentialsDto): Promise<Partial<Todo>> {
+login(@Body() credentials:LoginCredentialsDto) {
 return this.todoservice.login(credentials);
 }
+@Post('file')
+@UseInterceptors(FileInterceptor('file',{
+storage: diskStorage({
 
+  destination:'/files',
+
+  filename:(req, file, callback) =>{
+   
+  const uniqueSuffix =  
+
+  Date.now() + '-' + Math.round(Math.random() * 1e9);
+  
+  const ext = extname(file.originalname);
+  const filename = `${file.originalname}-${uniqueSuffix}-${ext}`; 
+  callback(null, filename);
+  },
+})
+
+}))
+handleUpload(@UploadedFile() file: Express.Multer.File ){
+  console.log('file', file);
+
+  return 'File Upload API'; 
+}
 }
