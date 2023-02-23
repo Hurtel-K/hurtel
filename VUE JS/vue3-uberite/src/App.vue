@@ -1,20 +1,21 @@
 <template>
   
  <div id="app">
-<RestaurantRow/>
+<HomeVue/>
  </div>
 
  
 </template>
 
 <script>
-import RestaurantRow from './components/RestaurantRow.vue';
 
+import HomeVue from './page/home.vue';
 export default {
   name: 'App',
   components:{
- RestaurantRow,
+   HomeVue,
   }
+
 }
 
 </script>
