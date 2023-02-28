@@ -1,13 +1,15 @@
 <template>
   <div class="home">
-<RestaurantRow/>
-  </div>
+   
+<RestaurantRow  v-for="(data, i) in data_restaurant" :key="i" :tree_restaurant="data"/>
+</div>
+
 </template>
 
-<script>
+<script>  
 //import
 import Bdd from '../Bdd.js';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
  //components
 import RestaurantRow from '../components/RestaurantRow.vue';
 export default {
@@ -27,20 +29,20 @@ export default {
         }
     }
 
-let data_restaurant =[]
+let data_restaurant = ref([]);
 
 const makeDataRestaurant = () => {
  
-let tree_restaurant =[];
+let tree_restaurant = [];
 
 for (const restaurant of Bdd) {
   const new_restorant =new Restaurant( restaurant.name ,restaurant.note ,restaurant.image ,restaurant.drive_time)
 
-if( tree_restaurant.length ===2){
+if( tree_restaurant.length === 2) {
   tree_restaurant.push(new_restorant) ;
-  data_restaurant.push(tree_restaurant);
-  tree_restaurant=[];
-}else{
+  data_restaurant.value.push(tree_restaurant);
+  tree_restaurant = [];
+} else {
   tree_restaurant.push(new_restorant) ; 
 }
  
@@ -48,9 +50,15 @@ if( tree_restaurant.length ===2){
   }
 
   }
-
+// console.log(data_restaurant)
 onMounted(makeDataRestaurant);
- }
+
+
+
+return {
+  data_restaurant,
+}
+ },
     
 }
 </script>
