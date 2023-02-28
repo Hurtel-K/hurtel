@@ -1,6 +1,6 @@
 <template>
 <div class="restorant--card">
- <div class="restorant--image">
+ <div :style="changeBackgroud" class="restorant--image">
 
  </div>
 
@@ -17,9 +17,20 @@
 </template>
 
 <script>
+//import
+import { computed } from 'vue';
 export default {
 name:"RestorantCard",
-props: {info_restaurant: Object}
+props: {info_restaurant: Object},
+setup(props){
+
+const changeBackgroud = computed( () =>{
+    return{
+        backgroundImage:`url(${props.info_restaurant.image})`
+    }
+})
+return{changeBackgroud};
+}
 }
 </script>
 
