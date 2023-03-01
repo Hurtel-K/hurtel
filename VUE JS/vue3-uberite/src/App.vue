@@ -1,20 +1,19 @@
 <template>
   
  <div id="app">
-<HomeVue/>
- </div>
 
- 
+  <router-view></router-view>
+ </div>
 </template>
 
 <script>
 
-import HomeVue from './page/home.vue';
+// import HomeVue from './page/home.vue';
 export default {
   name: 'App',
-  components:{
-   HomeVue,
-  }
+  // components:{
+  //  HomeVue,
+  // }
 
 }
 
