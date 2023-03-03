@@ -36,7 +36,7 @@ return{changeBackgroud};
 
 <style lang="scss">
 .restorant--card{
- width: 32%; 
+ width: 100%; 
  height: 30vh;
 
  

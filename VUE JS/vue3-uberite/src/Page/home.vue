@@ -19,7 +19,7 @@
     </div>
     <div class="banier"></div>
    
-<RestaurantRow  v-for="(data, i) in data_restaurant" :key="i" :tree_restaurant="data"/>
+<RestaurantRow  v-for="(data, i) in data_restaurant" :key="i" :tree_restaurant="data"/> 
 </div>
 
 </template>

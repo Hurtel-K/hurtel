@@ -4,16 +4,15 @@
 
   <router-view></router-view>
  </div>
+ 
 </template>
 
 <script>
 
-// import HomeVue from './page/home.vue';
+  
 export default {
   name: 'App',
-  // components:{
-  //  HomeVue,
-  // }
+
 
 }
 
@@ -26,4 +25,6 @@ export default {
   font-family: 'Roboto', sans-serif;
   padding: 0px 20px;
 }
+
+
 </style>

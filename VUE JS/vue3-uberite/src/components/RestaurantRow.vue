@@ -5,7 +5,9 @@
    
     </h2>
     <div class="wrapper--card">
-       <restorant-card v-for="(card, index) in tree_restaurant" :info_restaurant="card" :key="index"/>
+        <Router-link class="restaurant--wrapper" v-for="(restaurant, index) in tree_restaurant" :key="index" :to="{name: 'Restaurant', params :{ name: restaurant.name}}">
+        <restorant-card :info_restaurant="restaurant"/>
+    </Router-link>
     </div>
  </div>
 </template>
@@ -15,7 +17,7 @@ import RestorantCard from './RestorantCard.vue';
 export default {
 name:"RestaurantRow",
 components:{
-    RestorantCard
+    RestorantCard  
 },
 props:{
     tree_restaurant: Array
@@ -32,7 +34,11 @@ props:{
         justify-content: space-between;
         
     }
-
+    .restaurant--wrapper{
+        width: 32%;
+        text-decoration: none;
+        color:green;
+    }
 }
 
 </style>
