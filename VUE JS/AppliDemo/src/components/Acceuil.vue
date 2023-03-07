@@ -3,8 +3,10 @@
   <div class="Option">
     <h1>Bienvenue dans notre Application Demo</h1>
     <div class="boutton">
-        <button>Liste des chapitre</button>
-        <button>Liste des Article</button>
+      <button type="button" class="btn btn-primary btn-lg">Liste des chapitre</button>
+      <button type="button" class="btn btn-primary btn-lg">Liste des Article</button>
+
+        
     </div>
   </div>
 </template>
@@ -15,7 +17,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 .Option{
     margin: 100px ;
     text-align: center;
@@ -27,7 +29,9 @@ export default {
  
 }
 button{
-  margin-right: 60px;
+  margin-right: 100px;
+  font-family: merriweather;
+  background-color: black;
 
 }
 h1{
