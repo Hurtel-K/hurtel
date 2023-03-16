@@ -12,10 +12,11 @@ import Header from './components/Header.vue'
 <style >
 .body{
   background-image: url("./assets/menu2.jpg");
+  position: absolute;
   background-size: cover;
   
   color: white;
-  height: 100vh;
+  height: 1200px;
   width: 100vw;
 }
 

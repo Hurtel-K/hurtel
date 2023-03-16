@@ -3,8 +3,8 @@
   <div class="Option">
     <h1>Bienvenue dans notre Application Demo</h1>
     <div class="boutton">
-      <button type="button" class="btn btn-primary btn-lg">Liste des chapitre</button>
-      <button type="button" class="btn btn-primary btn-lg">Liste des Article</button>
+      <router-link to="/liste_chapitre"> <button type="button" class="btn btn-primary btn-lg"></button></router-link>
+      <router-link to="/liste_article"> <button type="button" class="btn btn-primary btn-lg"></button></router-link>
 
         
     </div>
@@ -31,7 +31,13 @@ export default {
 button{
   margin-right: 100px;
   font-family: merriweather;
-  background-color: black;
+  background-color:var(--bs-teal) ;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px inset  white;
+  width: 300px;
+  height: 100px;
+
 
 }
 h1{
