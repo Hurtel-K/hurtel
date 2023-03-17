@@ -25,7 +25,7 @@
     <thead>
         <tr>
             <th>Titre</th>
-            <th>Suprimmer</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>

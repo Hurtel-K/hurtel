@@ -12,7 +12,6 @@ import Header from './components/Header.vue'
 <style >
 .body{
   background-image: url("./assets/menu2.jpg");
-  position: absolute;
   background-size: cover;
   
   color: white;

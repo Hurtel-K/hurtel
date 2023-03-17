@@ -21,7 +21,7 @@
           </div><br>
           
           <div class="input-group">
-            <span class="input-group-text">Contenue </span>
+            <span class="input-group-text">Chapitre</span>
           <select  name="chapitre" class="imput" aria-label="Default select example" v-model="article.chapitre" >
             
             <option  selected >votre chapitre pour l'article</option>
@@ -55,7 +55,7 @@
             <th>Nom</th>
             <th>Content</th>
             <th>Chapitre</th>
-            <th>Suprimmer</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
